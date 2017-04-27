@@ -14,7 +14,7 @@ pkgName = pkgName.slice(5);
 
 
 exports.yargs = {
-  command: 'voip-creds',
+  command: pkgName,
   describe: 'Show some common VoIP system default credentials.',
 
   builder: {},
