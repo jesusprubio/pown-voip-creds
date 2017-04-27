@@ -7,6 +7,9 @@
 
 'use strict';
 
+const logger = require('pown-logger');
+
+const creds = require('./cfg.json');
 let pkgName = require('./package').name;
 
 
@@ -20,9 +23,6 @@ exports.yargs = {
   builder: {},
 
   handler: () => {
-    const logger = require('pown-logger');
-    const creds = require('./cfg.json');
-
     // TODO: Maybe it should be better to print this in the client.
     logger.title(pkgName);
     logger.result(creds);
