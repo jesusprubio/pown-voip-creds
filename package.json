@@ -40,7 +40,7 @@
     ]
   },
   "dependencies": {
-    "pown-logger": "^0.1.0"
+    "pown-logger": "^0.1.1"
   },
   "devDependencies": {
     "depcheck": "^0.6.4",
