@@ -25,6 +25,6 @@ exports.yargs = {
   handler: () => {
     // TODO: Maybe it should be better to print this in the client.
     logger.title(pkgName);
-    logger.result('Credentials', creds);
+    logger.result(null, creds);
   },
 };
