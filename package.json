@@ -1,6 +1,6 @@
 {
   "name": "pown-voip-creds",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Pownage guaranteed",
   "main": "index.js",
   "scripts": {
