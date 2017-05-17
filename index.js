@@ -7,24 +7,20 @@
 
 'use strict';
 
-const logger = require('pown-logger');
-
-const creds = require('./cfg.json');
-let pkgName = require('./package').name;
-
-
-pkgName = pkgName.slice(5);
-
 
 exports.yargs = {
-  command: pkgName,
+  command: 'voip-creds',
   describe: 'Show some common VoIP system default credentials',
 
   builder: {},
 
   handler: () => {
-    // TODO: Maybe it should be better to print this in the client.
-    logger.title(pkgName);
+    /* eslint-disable global-require */
+    const logger = require('pown-logger');
+    const creds = require('./cfg.json');
+    /* eslint-enable global-require */
+
+    logger.title(this.yargs.command);
     logger.result(null, creds);
   },
 };
